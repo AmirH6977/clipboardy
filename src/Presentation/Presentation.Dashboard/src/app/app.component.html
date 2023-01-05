@@ -1,0 +1,21 @@
+<app-header (featureSelected)="onNavigate($event)"></app-header>
+<div class="row" *ngIf="loadedFeature==='SignIn'">
+  <div class="col-xs-12 p-5">
+    <form>
+      <fieldset disabled>
+        <div class="mb-3">
+          <input
+            type="text"
+            id="inputClipBoard"
+            class="form-control"
+            placeholder="Please Sign In First">
+        </div>
+      </fieldset>
+    </form>
+  </div>
+</div>
+<div class="row">
+  <div class="col-md-12">
+    <app-clipBoard-list *ngIf="loadedFeature!=='SignIn'"></app-clipBoard-list>
+  </div>
+</div>
